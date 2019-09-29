@@ -1,0 +1,17 @@
+import random
+def generate_proph():
+	times = ["утром", "днём", "вечером"] 
+	advices = ["ожидайте", "предостерегайтесь", "будьте открыты для"] 
+	promises = ["гостей", "встреч", "неожиданного праздника", "перемен"]
+
+	generated_prophecies = []
+	for i in range(0,5):
+		prediction = ''
+		for j in range(0,3):
+			t = times[j]
+			a = random.choice(advices)
+			p = random.choice(promises)
+			prediction += ' {0} {1} {2}.'.format(t.capitalize(), a, p)
+		generated_prophecies.append(prediction)
+
+	return generated_prophecies
